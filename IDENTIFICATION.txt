@@ -1,0 +1,7 @@
+name "Farid Anjidani"
+student_id "V00971584"
+email "farida@uvic.ca"
+term "2021-05"
+course "ECE596C"
+section "T01"
+assignment "cpp_project"

@@ -1,0 +1,19 @@
+#! /usr/bin/env bash
+
+# Print an error message and exit.
+panic()
+{
+	echo "ERROR: $@"
+	exit 1
+}
+
+# Get the directory in which the currently running script is located.
+cmd_dir=$(dirname "$0") || panic "cannot determine command directory"
+
+program="$cmd_dir/upscale_image"
+
+
+echo "Running upscale image program"
+cat $cmd_dir/../files/coke.jpg | $program $cmd_dir/../files/weights.csv > demo_highres.jpg || panic "upscaling failed"
+
+
